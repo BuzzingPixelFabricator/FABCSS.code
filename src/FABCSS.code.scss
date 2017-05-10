@@ -1,0 +1,95 @@
+/*----------------------------------------------------------------------------*\
+    # Copyright 2017, BuzzingPixel, LLC
+
+    # This program is free software: you can redistribute it and/or modify
+    # it under the terms of the Apache License 2.0.
+    # http://www.apache.org/licenses/LICENSE-2.0
+\*----------------------------------------------------------------------------*/
+
+
+/**
+ * Variables
+ */
+$codeBackground: lighten(#000, 90%) !default;
+$codeBorderColor: false !default;
+$codeColor: lighten(#000, 25%) !default;
+$codeFont: monospace !default;
+$codeFontSize: 16px !default;
+$codeLineHeight: 1.4em !default;
+$codePaddingHorizontal: .5em !default;
+$codePaddingVertical: .2em !default;
+$codeRounded: 0 !default;
+
+$codeBlockColor: lighten(#000, 90%) !default;
+$codeBlockFont: $codeFont !default;
+$codeBlockFontSize: 13px !default;
+$codeBlockBackground: lighten(#000, 25%) !default;
+$codeBlockBorderColor: false !default;
+$codeBlockRounded: 0 !default;
+$codeBlockMarginBottom: 20px !default;
+$codeBlockTabSize: 4 !default;
+
+$codeBlockWrap: false !default;
+$codeBlockPaddingHorizontal: 20px !default;
+$codeBlockPaddingVertical: 14px !default;
+
+
+code,
+kbd,
+samp {
+    background: $codeBackground;
+    border-radius: $codeRounded;
+    color: $codeColor;
+    font-family: $codeFont;
+    font-size: $codeFontSize;
+    line-height: $codeLineHeight;
+    padding-bottom: $codePaddingVertical;
+    padding-left: $codePaddingHorizontal;
+    padding-right: $codePaddingHorizontal;
+    padding-top: $codePaddingVertical;
+
+    @if $codeBorderColor {
+        border: 1px solid $codeBorderColor;
+    }
+}
+
+pre {
+    background: $codeBlockBackground;
+    border-radius: $codeBlockRounded;
+    margin-bottom: $codeBlockMarginBottom;
+
+    -moz-tab-size: $codeBlockTabSize;
+    -o-tab-size: $codeBlockTabSize;
+    tab-size: $codeBlockTabSize;
+
+    @if $codeBlockBorderColor {
+        border: 1px solid $codeBlockBorderColor;
+    }
+
+    code {
+        background: transparent;
+        color: $codeBlockColor;
+        display: block;
+        font-family: $codeFont;
+        font-size: $codeBlockFontSize;
+        padding-bottom: $codeBlockPaddingVertical;
+        padding-left: $codeBlockPaddingHorizontal;
+        padding-right: $codeBlockPaddingHorizontal;
+        padding-top: $codeBlockPaddingVertical;
+
+        @if $codeBorderColor == false {
+            border: 0;
+        }
+
+        @if $codeBlockWrap == true {
+            white-space: -moz-pre-wrap;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        @if $codeBlockWrap != true {
+            overflow: auto;
+            white-space: pre;
+        }
+    }
+}
