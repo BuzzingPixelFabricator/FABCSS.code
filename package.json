@@ -1,6 +1,6 @@
 {
     "name": "fabcss.code",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Fabricator code styling",
     "homepage": "https://github.com/BuzzingPixelFabricator/fabcss.code",
     "bugs": "https://github.com/BuzzingPixelFabricator/fabcss.code/issues",
@@ -28,7 +28,7 @@
     },
     "fabricatorPostCssBuild": {
         "cssFiles": [
-            "src/FABCSS.code.scss"
+            "src/FABCSS.code.pcss"
         ]
     }
 }
