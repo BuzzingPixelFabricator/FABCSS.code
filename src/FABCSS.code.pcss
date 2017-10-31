@@ -1,0 +1,78 @@
+/*----------------------------------------------------------------------------*\
+    # Copyright 2017, BuzzingPixel, LLC
+
+    # This program is free software: you can redistribute it and/or modify
+    # it under the terms of the Apache License 2.0.
+    # http://www.apache.org/licenses/LICENSE-2.0
+\*----------------------------------------------------------------------------*/
+
+/**
+ * Variables
+ */
+:root {
+    --codeBackground: #e6e6e6;
+    --codeBorderWidth: 0;
+    --codeBorderColor: #e6e6e6;
+    --codeColor: #404040;
+    --codeFont: monospace;
+    --codeFontSize: 16px;
+    --codeLineHeight: 1.4em;
+    --codePaddingHorizontal: 0.5em;
+    --codePaddingVertical: 0.2em;
+    --codeRounded: 0;
+
+    --codeBlockColor: #e6e6e6;
+    --codeBlockFont: var(--codeFont);
+    --codeBlockFontSize: 13px;
+    --codeBlockBackground: var(--codeColor);
+    --codeBlockBorderWidth: var(--codeBorderWidth);
+    --codeBlockBorderColor: var(--codeBorderColor);
+    --codeBlockRounded: var(--codeRounded);
+    --codeBlockMarginBottom: 20px;
+    --codeBlockTabSize: 4;
+    --codeBlockOverflow: auto;
+    --codeBlockWhiteSpace: inherit;
+    --codeBlockWordWrap: inherit;
+    --codeBlockPaddingHorizontal: 20px;
+    --codeBlockPaddingVertical: 14px;
+}
+
+code,
+kbd,
+samp {
+    background: var(--codeBackground);
+    border: var(--codeBorderWidth) solid var(--codeBorderColor);
+    border-radius: var(--codeRounded);
+    color: var(--codeColor);
+    font-family: var(--codeFont);
+    font-size: var(--codeFontSize);
+    line-height: var(--codeLineHeight);
+    padding-bottom: var(--codePaddingVertical);
+    padding-left: var(--codePaddingHorizontal);
+    padding-right: var(--codePaddingHorizontal);
+    padding-top: var(--codePaddingVertical);
+}
+
+pre {
+    background: var(--codeBlockBackground);
+    border: var(--codeBlockBorderWidth) solid var(--codeBlockBorderColor);
+    border-radius: var(--codeBlockRounded);
+    margin-bottom: var(--codeBlockMarginBottom);
+    tab-size: var(--codeBlockTabSize);
+}
+
+pre code {
+    background: transparent;
+    border: 0;
+    color: var(--codeBlockColor);
+    display: block;
+    font-family: var(--codeFont);
+    font-size: var(--codeBlockFontSize);
+    overflow: var(--codeBlockOverflow);
+    padding-bottom: var(--codeBlockPaddingVertical);
+    padding-left: var(--codeBlockPaddingHorizontal);
+    padding-right: var(--codeBlockPaddingHorizontal);
+    padding-top: var(--codeBlockPaddingVertical);
+    white-space: var(--codeBlockWhiteSpace);
+    word-wrap: var(--codeBlockWordWrap);
+}
